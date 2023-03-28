@@ -1,0 +1,68 @@
+# 2. Class and Object
+
+A class is a template for objects, and an object is an instance of a class.
+
+When the individual objects are created, they inherit all the properties and behaviors from the class, but each object will have different values for the properties.
+
+Một lớp là khuôn mẫu cho các đối tượng và một đối tượng là một thể hiện của một lớp.
+
+Khi các đối tượng riêng lẻ được tạo, chúng kế thừa tất cả các thuộc tính và hành vi từ lớp, nhưng mỗi đối tượng sẽ có các giá trị khác nhau cho các thuộc tính.
+
+# Class
+
+A class is defined by using the class keyword
+
+```
+<?php
+class Fruit {
+  // Properties
+  public $name;
+  public $color;
+
+  // Methods
+  function set_name($name) {
+    $this->name = $name;
+  }
+  function get_name() {
+    return $this->name;
+  }
+}
+?>
+```
+
+# Object
+
+Each object has all the properties and methods defined in the class, but they will have different property values.
+
+Objects of a class are created using the new keyword.
+
+```
+<?php
+class Fruit {
+  // Properties
+  public $name;
+  public $color;
+
+  // Methods
+  function set_name($name) {
+    $this->name = $name;
+  }
+  function get_name() {
+    return $this->name;
+  }
+  function set_color($color) {
+    $this->color = $color;
+  }
+  function get_color() {
+    return $this->color;
+  }
+}
+
+$apple = new Fruit();
+$apple->set_name('Apple');
+$apple->set_color('Red');
+echo "Name: " . $apple->get_name();
+echo "<br>";
+echo "Color: " . $apple->get_color();
+?>
+```
